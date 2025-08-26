@@ -24,6 +24,8 @@ class GccConan(ConanFile):
     url = "https://github.com/conan-io/conan-center-index"
     license = "GPL-3.0-only"
     settings = "os", "compiler", "arch", "build_type"
+    vendor = True
+    build_mode = "minor_mode"
 
     def configure(self):
         if self.settings.compiler in ["clang", "apple-clang"]:
